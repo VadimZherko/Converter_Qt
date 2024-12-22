@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>106</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Converter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #2e3440; /* Темный фон */
+    color: #eceff4; /* Светлый текст */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    background-color: #3b4252; /* Серый фон */
+    color: #d8dee9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    border: 2px solid #81a1c1; /* Голубая рамка */
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #eceff4; /* Светлый фон */
+    color: #2e3440; /* Темный текст */
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QComboBox" name="comboBox_3">
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    border: 2px solid #88c0d0; /* Голубая рамка */
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #eceff4;
+    color: #2e3440;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #88c0d0;
+    background-color: #4c566a; /* Темная кнопка выпадающего меню */
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #eceff4; /* Фон списка */
+    color: #E0FFFF;
+    selection-background-color: #5e81ac; /* Выбранный элемент */
+    selection-color: #2e3440;
+}
+QComboBox::down-arrow {
+    border: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #d8dee9; /* Цвет стрелки */
+}
+
+QComboBox::down-arrow:hover {
+    border-top: 6px solid #81a1c1; /* Цвет стрелки при наведении */
+}
+</string>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>length</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>time</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>weight</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="whatsThis">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QComboBox {
+    border: 2px solid #88c0d0; /* Голубая рамка */
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #eceff4;
+    color: #2e3440;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #88c0d0;
+    background-color: #4c566a; /* Темная кнопка выпадающего меню */
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #eceff4; /* Фон списка */
+    color: #2e3440;
+    selection-background-color: #5e81ac; /* Выбранный элемент */
+    selection-color: #eceff4;
+}
+QComboBox::down-arrow {
+    border: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #d8dee9; /* Цвет стрелки */
+}
+
+QComboBox::down-arrow:hover {
+    border-top: 6px solid #81a1c1; /* Цвет стрелки при наведении */
+}</string>
+          </property>
+          <property name="maxVisibleItems">
+           <number>10</number>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="modelColumn">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>0</width>
+        <height>10</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: 2px solid #5e81ac;
+    border-radius: 8px;
+    padding: 8px 15px;
+    background-color: #5e81ac; /* Синий фон */
+    color: #eceff4;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #81a1c1; /* Более светлый синий при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #4c566a; /* Темный фон при нажатии */
+}</string>
+        </property>
+        <property name="text">
+         <string>Convert</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buttonClear">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    border: 2px solid #5e81ac;
+    border-radius: 8px;
+    padding: 8px 15px;
+    background-color: #5e81ac; /* Синий фон */
+    color: #eceff4;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #81a1c1; /* Более светлый синий при наведении */
+}
+
+QPushButton:pressed {
+    background-color: #4c566a; /* Темный фон при нажатии */
+}</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    border: 2px solid #81a1c1; /* Голубая рамка */
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #eceff4; /* Светлый фон */
+    color: #2e3440; /* Темный текст */
+    font-size: 16px;
+    font-weight: bold;
+}</string>
+        </property>
+        <property name="text">
+         <string>Converted value</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="styleSheet">
+         <string notr="true">QComboBox {
+    border: 2px solid #88c0d0; /* Голубая рамка */
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #eceff4;
+    color: #2e3440;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #88c0d0;
+    background-color: #4c566a; /* Темная кнопка выпадающего меню */
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #eceff4; /* Фон списка */
+    color: #2e3440;
+    selection-background-color: #5e81ac; /* Выбранный элемент */
+    selection-color: #eceff4;
+}
+QComboBox::down-arrow {
+    border: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #d8dee9; /* Цвет стрелки */
+}
+
+QComboBox::down-arrow:hover {
+    border-top: 6px solid #81a1c1; /* Цвет стрелки при наведении */
+}
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
